@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application</h1>
+        <p class="text">please fill out the form to apply for a job</p>
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="full_name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+            <label for="phone-num">Phone Number</label>
+            <input type="tel" id="phone-num" name="phone-num" placeholder="+93 700 000 000" required>
+                
+            <label for="birth">Date of Birth</label>
+            <input type="date" id="birth" name="date_of_birth" required>
+                
+            <label>Gender</label>
+            <div class="options">
+                <label>
+                <input type="radio" name="gender" value="female" required>Female</label>
+                <label>
+                <input type="radio" name="gender" value="male"> Male</label>
+                <label>
+                <input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Job Information</legend>
+            <label for="position">Job Position</label>
+            <select id="position" name="job_position" required>
+            <option value="" selected disabled>Select a position</option>
+            <option value="web-developer">Web Developer</option>
+            <option value="designer">UI/UX Designer</option>
+            <option value="software-developer">Software Developer</option>
+            <option value="other">other</option>
+
+            </select>
+                <label for="experience">Years of Experience</label>
+                <input type="number" id="experience" name="experience" placeholder="For example: 2" min="0" required>
+
+                <label>Skills</label>
+                <div class="options">
+                    <label>
+                    <input type="checkbox" name="skills" value="html">HTML</label>
+                    <label>
+                    <input type="checkbox" name="skills" value="css">CSS</label>
+                    <label>
+                    <input type="checkbox" name="skills" value="javascript">JavaScript</label>
+                    <label>
+                    <input type="checkbox" name="skills" value="python">python</label>
+                </div>
+        </fieldset>
+        <fieldset>
+            <legend>Application Details</legend>
+                <label for="resume">Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+                <label for="cover">Cover Letter</label>
+                <textarea id="cover" name="cover_letter" rows="6" placeholder="Write your cover letter here..." required></textarea>
+
+                <div class="terms">
+                    <label>
+                    <input type="checkbox" name="terms" value="accepted" required>I accept the Terms & Conditions</label>
+                </div>
+        </fieldset>
+        <div class="buttons">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
